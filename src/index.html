@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Log</title>
+    <link href="/bootstrap.min.css" rel="stylesheet">
+    <link href="/cover.css" rel="stylesheet">
+    <script src="/utils.js"></script>
+</head>
+<body class="d-flex h-100 text-bg-dark">
+    <div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="">
+          <div>
+            <h3 class="float-md-start mb-0">Log</h3>
+            <nav class="nav nav-masthead justify-content-center float-md-end">
+              <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="/">Internos</a>
+            </nav>
+          </div>
+        </header>
+        <div class="row pt-4">
+            <form class="pt-4" id="search-form">
+                <input class="form-control" type="text" name="interno" id="interno" placeholder="N° interno" required autofocus>
+            </form>
+        </div>
+      
+        <main class="px-3 my-auto">
+            <div class="row">
+                <div class="container my-4" id="results"></div>
+                <button type="button" class="btn btn-xs btn-info" id="button-create" style="display: none;">Crear registro</button>
+                <button type="button" class="btn btn-xs btn-info" id="button-edit" style="display: none;">Editar</button>
+                <div class="container" id="interno-container-edit" style="display: none;">
+                    <form id="form-edit">
+                        <div class="mb-3">
+                            <label class="form-label" for="interno-edit">Interno</label>
+                            <input class="form-control" type="text" name="interno" id="interno-edit" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="textarea-descrip-edit">Descripción</label>
+                            <textarea class="form-control" id="textarea-descrip-edit" rows="15"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <button class="btn-xs btn btn-success">Guardar cambios</button>
+                            <button type="button" id="cancel-edit" class="btn-xs btn btn-secondary">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="container" id="interno-container-create" style="display: none;">
+                    <form id="form-create">
+                        <div class="mb-3">
+                            <label class="form-label" for="interno-create">Interno</label>
+                            <input class="form-control" type="text" name="interno" id="interno-create" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Descripción</label>
+                            <textarea class="form-control" id="textarea-descrip-create" rows="10"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <button class="btn-xs btn btn-success">Crear</button>
+                            <button type="button" id="cancel-create" class="btn-xs btn btn-secondary">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+      </div>
+      
+    <script src="/bootstrap.bundle.min.js"></script>
+    <script src="/internos.js"></script>
+</body>
+</html>
